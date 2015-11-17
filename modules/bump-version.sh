@@ -10,7 +10,6 @@ if [ -z "$VERSION" ]; then
     fi
 fi
 
-VERSION_FILE=$(__get_version_file)
 VERSION=$($HOOKS_DIR/modules/semverbump.sh "$VERSION" "$VERSION_FILE" "$VERSION_SORT")
 
 if [ $? -ne 0 ]; then
